@@ -1,0 +1,15 @@
+collectors:
+  enabled: cpu,cs,logical_disk,net,os
+collector:
+  service:
+    services-where: Name='windows_exporter'
+  scheduled_task:
+    blacklist: /Microsoft/.+
+log:
+  level: debug
+scrape:
+  timeout-margin: 0.5
+telemetry:
+  addr: ":9100"
+  path: /metrics
+  max-requests: 5
