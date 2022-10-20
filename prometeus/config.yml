@@ -1,5 +1,8 @@
 collectors:
   enabled: cpu,cs,logical_disk,net,os
+  scrape_interval:     36s
+
+  
 collector:
   service:
     services-where: Name='windows_exporter'
